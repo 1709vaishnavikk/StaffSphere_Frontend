@@ -1,0 +1,376 @@
+/* App.css */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+/* Register Form Styles */
+.register, .login, .update{
+  padding: 30px;
+  max-width: 900px;  /* Fixed max-width */
+  width: 100vw;  /* Ensure form width doesn't exceed max-width */
+  margin: 0 auto; /* Center the form horizontally */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;  /* Ensure the form takes minimum height */
+  height: 100vh;
+}
+
+/* Heading Style */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: bold;
+  color: #007bff;
+}
+p{
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Form Styles */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 20px; /* Space between fields */
+  width: 100%;
+  margin-top: 20px;
+  max-width: 900px; /* Max width to prevent overflow */
+}
+
+/* Input Fields */
+form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #007bff;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+form input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Labels */
+form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: skyblue;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .register, .login, .update, .delete {
+    padding: 20px;
+    width: 90%;
+  }
+
+  form {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    gap: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+
+
+.home {
+  background-image: url('https://i.pinimg.com/736x/81/32/80/813280096b6183e79d7e333a0fb508a3.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  color: white; /* Text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for visibility */
+}
+
+.home-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 0; /* Ensure overlay stays behind content */
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* ViewList Container */
+.view-list {
+  width: 100%; /* Increased from 80% to 90% for a larger container */
+  max-width: 1200px; /* Added a max-width for larger screens */
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2.5rem; /* Slightly increased padding for better spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.view-list h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Input Fields */
+.view-list input {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 1rem;
+}
+
+.view-list label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  color: #555555;
+}
+
+/* Buttons */
+.view-list .button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+.view-list button {
+  width: auto;
+  display: inline;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 0.3rem 0.6rem; /* Reduced padding for smaller buttons */
+  margin: 0.4rem;
+  font-size: 1rem; /* Reduced font size */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-list button:hover {
+  background-color: #0056b3;
+}
+
+.view-list button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+table thead {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+table th, table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #dddddd;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: bisque;
+  color: black;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .view-list {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .view-list input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .view-list button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  z-index: 10; /* Ensures navbar stays on top of other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-center a:hover {
+  color: #f4a261;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-right button {
+  padding: 10px 20px;
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-right button:hover {
+  background-color: #e76f51;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
